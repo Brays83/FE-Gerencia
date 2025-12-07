@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Resistencia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Simulador de Acero</h1>
+        <p>Ingresa los parámetros de laminación</p>
+
+        <form id="formulario-calculo">
+            <div class="input-group">
+                <label for="tipo_acero">Tipo de Acero (1-5)</label>
+                <input type="number" id="tipo_acero" min="1" max="5" step="0.1" value="3" required>
+            </div>
+
+            <div class="input-group">
+                <label for="temperatura">Temperatura (°C)</label>
+                <input type="number" id="temperatura" min="600" max="1200" value="900" required>
+            </div>
+
+            <div class="input-group">
+                <label for="reduccion">Reducción en Frío (%)</label>
+                <input type="number" id="reduccion" min="0" max="100" value="20" required>
+            </div>
+
+            <button type="submit">CALCULAR RESISTENCIA</button>
+        </form>
+
+        <div id="resultado" class="resultado-box hidden">
+            <div id="semaforo" class="semaforo"></div>
+            <h2 id="valor-resistencia">0.00 MPa</h2>
+            <p id="texto-clasificacion">---</p>
+        </div>
+        
+        <p id="error-msg" class="error hidden"></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
