@@ -1,5 +1,5 @@
 // URL de tu Backend (Asegúrate que tu python main.py esté corriendo)
-const API_URL = "http://136.113.178.153/calcular";
+const API_URL = "https://www.ibrayan.dev/calcular";
 
 const form = document.getElementById('formulario-calculo');
 const resultadoDiv = document.getElementById('resultado');
